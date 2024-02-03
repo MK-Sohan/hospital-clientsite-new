@@ -1,18 +1,54 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+.app {
+  font-family: "Playfair Display", serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.red {
+  background: red;
 }
-
+.textred {
+  color: red;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@keyframes shaky {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
+/* Apply the shaky animation to the button */
+.shaky-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  animation: shaky 0.5s infinite;
+}
+
+/* Stop the shaky animation on hover */
+.shaky-button:hover {
+  animation: none;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
